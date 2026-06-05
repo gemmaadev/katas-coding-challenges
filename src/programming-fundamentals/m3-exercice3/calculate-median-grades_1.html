@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>M3. Exercici 3. Mitjana de 3 notes</h1>
+    <p>
+      El programa demana a l'usuari/ària que introdueixi 3 notes i el programa
+      mostra la mitjana de les 3 notes per pantalla.
+    </p>
+    <input type="button" value="Acceptar" onclick="calcularMitjana()" />
+
+    <script>
+      function calcularMitjana() {
+        let nota1 = Number(prompt("Introdueix la primera nota"));
+        let nota2 = Number(prompt("Introdueix la segona nota"));
+        let nota3 = Number(prompt("Introdueix la tercera nota"));
+
+        console.log("La mitjana és " + (nota1 + nota2 + nota3) / 3);
+      }
+
+      /* Exercici resolt de manera curta:  
+        (Recollim dades per teclat mitjançant prompt 
+        + Mostrem dades per consola amb console.log)
+        */
+    </script>
+  </body>
+</html>

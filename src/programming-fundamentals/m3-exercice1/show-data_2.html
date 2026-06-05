@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>M3. Exercici 1. Mostrar dades</h1>
+    <p>
+      Fer un programa que li demani a l’usuari/ària mitjançant el prompt
+      aquestes dades: Nom. Cognom. Edat. <br /><br />
+      Un cop l’usuari/ària hagi acabat d’introduir les dades, aquestes s’han de
+      mostrar: Per consola. Amb un popup (alert). Mitjançant getElementById().
+    </p>
+
+    <input type="button" value="Acceptar" onclick="main()" />
+
+    <p id="mostrar_resultat"></p>
+
+    <script>
+      function main() {
+        let nom = prompt("Introdueix el teu nom");
+        let cognom = prompt("Introdueix el teu cognom");
+        let edat = Number(prompt("Introdueix la teva edat"));
+
+        let resultat = `Et dius ${nom} ${cognom} i tens ${edat} anys`;
+
+        document.getElementById("mostrar_resultat").innerHTML = resultat;
+        console.log(`Et dius ${nom} ${cognom} i tens ${edat} anys`);
+        alert(`Et dius ${nom} ${cognom} i tens ${edat} anys`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>M3. Exercici 2. Calculadora arcaica</h1>
+    <p>
+      Fer un programa que li demani dos nombres enters a l’usuari/ària. Al
+      final, el programa imprimeix per pantalla el següent missatge: El resultat
+      de la suma és: “valor” El resultat de la resta és: “valor” El resultat de
+      la multiplicació és: “valor” El resultat de la divisió és: “valor”.
+    </p>
+
+    <input type="number" id="caixeta_numero1" />
+    <input type="number" id="caixeta_numero2" />
+
+    <input type="button" value="Calcular" onclick="main()" />
+
+    <p id="mostrar_resultat"></p>
+
+    <script>
+      function main() {
+        let numero1 = parseInt(
+          document.getElementById("caixeta_numero1").value,
+        );
+        let numero2 = parseInt(
+          document.getElementById("caixeta_numero2").value,
+        );
+
+        if (isNaN(numero1) || isNaN(numero2)) {
+          alert("Introdueix un número vàlid");
+          return;
+        }
+
+        let resultat = calcular(numero1, numero2);
+
+        document.getElementById("mostrar_resultat").innerHTML = resultat;
+      }
+
+      function calcular(numero1, numero2) {
+        let suma = "El resultat de la suma és: " + (numero1 + numero2);
+        let resta = "El resultat de la resta és: " + (numero1 - numero2);
+        let multiplicacio =
+          "El resultat de la multiplicació és: " + numero1 * numero2;
+        let divisio = "El resultat de la divisió és: " + numero1 / numero2;
+
+        let resultat =
+          suma + "<br>" + resta + "<br>" + multiplicacio + "<br>" + divisio;
+        return resultat;
+      }
+    </script>
+  </body>
+</html>

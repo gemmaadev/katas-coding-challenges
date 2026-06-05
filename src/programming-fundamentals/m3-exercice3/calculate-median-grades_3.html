@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>M3. Exercici 3. Mitjana de 3 notes</h1>
+    <p>
+      El programa demana a l'usuari/ària que introdueixi 3 notes i el programa
+      mostra la mitjana de les 3 notes per pantalla.
+    </p>
+    <input type="number" id="caixeta_nota1" />
+    <input type="number" id="caixeta_nota2" />
+    <input type="number" id="caixeta_nota3" />
+
+    <input type="button" value="Acceptar" onclick="main()" />
+
+    <p id="mostrar_resultat"></p>
+
+    <script>
+      function main() {
+        let nota1 = parseFloat(document.getElementById("caixeta_nota1").value); //parseFloat ja fa trim i agafa decimals
+        let nota2 = parseFloat(document.getElementById("caixeta_nota2").value);
+        let nota3 = parseFloat(document.getElementById("caixeta_nota3").value);
+        if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
+          alert("Introdueix notes vàlides");
+          return;
+        }
+
+        if (
+          nota1 > 10 ||
+          nota1 < 0 ||
+          nota2 > 10 ||
+          nota2 < 0 ||
+          nota3 > 10 ||
+          nota3 < 0
+        ) {
+          alert("Has d'introduir un número entre 0 i 10");
+          return;
+        }
+
+        let resultat = calcularMitjana(nota1, nota2, nota3);
+
+        document.getElementById("mostrar_resultat").innerHTML =
+          "La nota mitjana és: " + resultat.toFixed(2);
+      }
+
+      function calcularMitjana(nota1, nota2, nota3) {
+        let mitjana = (nota1 + nota2 + nota3) / 3;
+        return mitjana;
+      }
+    </script>
+  </body>
+</html>

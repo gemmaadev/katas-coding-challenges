@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>M3. Exercici 3. Mitjana de 3 notes</h1>
+    <p>
+      El programa demana a l'usuari/ària que introdueixi 3 notes i el programa
+      mostra la mitjana de les 3 notes per pantalla.
+    </p>
+    <input type="number" id="input_nota1" />
+    <input type="number" id="input_nota2" />
+    <input type="number" id="input_nota3" />
+
+    <input type="button" value="Acceptar" onclick="calcularMitjana()" />
+
+    <p id="mostrar_resultat"></p>
+
+    <script>
+      function calcularMitjana() {
+        let nota1 = Number(document.getElementById("input_nota1").value);
+        let nota2 = Number(document.getElementById("input_nota2").value);
+        let nota3 = Number(document.getElementById("input_nota3").value);
+
+        document.getElementById("mostrar_resultat").innerHTML =
+          "La mitjana és: " + (nota1 + nota2 + nota3) / 3;
+      }
+      /* Exercici resolt de manera llarga:
+        (Recollim dades per teclat mitjançant input
+        + Mostrem dades per pantalla amb getElementById)
+        */
+    </script>
+  </body>
+</html>

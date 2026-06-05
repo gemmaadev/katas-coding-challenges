@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>M3. Exercici 2. Calculadora arcaica</h1>
+    <p>
+      Fer un programa que li demani dos nombres enters a l’usuari/ària. Al
+      final, el programa imprimeix per pantalla el següent missatge: El resultat
+      de la suma és: “valor” El resultat de la resta és: “valor” El resultat de
+      la multiplicació és: “valor” El resultat de la divisió és: “valor”.
+    </p>
+    <input type="button" value="Acceptar" onclick="calcularOperacions()" />
+    <script>
+      function calcularOperacions() {
+        let numero1 = Number(prompt("Introdueix un primer número enter"));
+        let numero2 = Number(prompt("Introdueix un segon número enter"));
+
+        console.log("El resultat de la suma és: " + (numero1 + numero2));
+        console.log("El resultat de la resta és: " + (numero1 - numero2));
+        console.log("El resultat de la multiplicació és: " + numero1 * numero2);
+        console.log("El resultat de la divisió és: " + numero1 / numero2);
+
+        /* Exercici resolt de manera curta:  
+        (Recollim dades per teclat mitjançant prompt 
+        + Mostrem dades per consola amb console.log)
+        */
+      }
+    </script>
+  </body>
+</html>

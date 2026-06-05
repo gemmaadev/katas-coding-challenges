@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>M3. Exercici 2. Calculadora arcaica</h1>
+    <p>
+      Fer un programa que li demani dos nombres enters a l’usuari/ària. Al
+      final, el programa imprimeix per pantalla el següent missatge: El resultat
+      de la suma és: “valor” El resultat de la resta és: “valor” El resultat de
+      la multiplicació és: “valor” El resultat de la divisió és: “valor”.
+    </p>
+    <input type="number" id="input_numero1" />
+    <input type="number" id="input_numero2" />
+
+    <p id="mostrar_suma"></p>
+    <p id="mostrar_resta"></p>
+    <p id="mostrar_multiplicacio"></p>
+    <p id="mostrar_divisio"></p>
+
+    <input type="button" value="Acceptar" onclick="calcularOperacions()" />
+
+    <script>
+      function calcularOperacions() {
+        let numero1 = Number(document.getElementById("input_numero1").value);
+        let numero2 = Number(document.getElementById("input_numero2").value);
+
+        document.getElementById("mostrar_suma").innerHTML =
+          "El resultat de la suma és: " + (numero1 + numero2);
+        document.getElementById("mostrar_resta").innerHTML =
+          "El resultat de la resta és: " + (numero1 - numero2);
+        document.getElementById("mostrar_multiplicacio").innerHTML =
+          "El resultat de la multiplicació és: " + numero1 * numero2;
+        document.getElementById("mostrar_divisio").innerHTML =
+          "El resultat de la divisió és: " + numero1 / numero2;
+      }
+      /* Exercici resolt de manera llarga:  
+        (Recollim dades per teclat mitjançant input 
+        + Mostrem dades per pantalla amb getElementById)
+        */
+    </script>
+  </body>
+</html>
